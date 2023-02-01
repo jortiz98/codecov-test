@@ -22,3 +22,12 @@ func (c *Car) GetModel() string {
 func (c *Car) GetMaker() string {
 	return c.Maker
 }
+
+func NewCar(miles, year int, model, maker string) *Car {
+	return &Car{
+		Miles: miles,
+		Year:  year,
+		Model: model,
+		Maker: maker,
+	}
+}
