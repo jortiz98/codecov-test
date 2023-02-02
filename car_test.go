@@ -16,6 +16,7 @@ var testcase = []struct {
 		Model: "M3",
 		Maker: "BMW",
 		Color: "blue",
+		Price: 9999.99,
 	}},
 	{name: "Audi", car: &foobar.Car{
 		Miles: 291000,
@@ -23,6 +24,7 @@ var testcase = []struct {
 		Model: "r8",
 		Maker: "Audi",
 		Color: "Gray",
+		Price: 9999.99,
 	}},
 	{name: "Tesla", car: &foobar.Car{
 		Miles: 6540,
@@ -30,6 +32,7 @@ var testcase = []struct {
 		Model: "Model Y",
 		Maker: "Tesla",
 		Color: "Black",
+		Price: 9999.99,
 	}},
 }
 
