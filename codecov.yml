@@ -1,15 +1,15 @@
 codecov:
   require_ci_to_pass: yes
   max_report_age: off
-  bot: "codecov-bot"
   strict_yaml_branch: "main"
 
 parsers:
   go:
     partials_as_hits: true
+
 comment:
-  layout: "header, diff, flags"
-  behavior: default
+  layout: "header, diff, flags, files"
+  behavior: new
   require_changes: no
   require_base: no
   require_head: yes
