@@ -87,3 +87,13 @@ func TestCar_GetColor(t *testing.T) {
 		})
 	}
 }
+
+func TestCar_GetPrice(t *testing.T) {
+	for _, tc := range testcase {
+		t.Run(tc.name, func(t *testing.T) {
+			actual := tc.car.GetPrice()
+
+			assert.Equal(t, tc.car.Price, actual)
+		})
+	}
+}
