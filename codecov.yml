@@ -8,8 +8,8 @@ parsers:
     partials_as_hits: true
 
 comment:
-  layout: "header, diff, flags"
-  behavior: default
+  layout: "header, diff, flags, files"
+  behavior: new
   require_changes: no
   require_base: no
   require_head: yes
