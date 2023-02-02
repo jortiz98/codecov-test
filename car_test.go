@@ -62,12 +62,12 @@ func TestCar_GetMiles(t *testing.T) {
 	}
 }
 
-//func TestCar_GetYear(t *testing.T) {
-//	for _, tc := range testcase {
-//		t.Run(tc.name, func(t *testing.T) {
-//			actual := tc.car.GetYear()
-//
-//			assert.Equal(t, tc.car.Year, actual)
-//		})
-//	}
-//}
+func TestCar_GetYear(t *testing.T) {
+	for _, tc := range testcase {
+		t.Run(tc.name, func(t *testing.T) {
+			actual := tc.car.GetYear()
+
+			assert.Equal(t, tc.car.Year, actual)
+		})
+	}
+}
