@@ -5,6 +5,7 @@ type Car struct {
 	Year  int
 	Model string
 	Maker string
+	Color string
 }
 
 func (c *Car) GetYear() int {
@@ -21,4 +22,8 @@ func (c *Car) GetModel() string {
 
 func (c *Car) GetMaker() string {
 	return c.Maker
+}
+
+func (c *Car) GetColor() string {
+	return c.Color
 }
