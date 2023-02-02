@@ -19,3 +19,9 @@ coverage:
     project: yes
     patch: yes
     changes: no
+
+flags:
+  unit:
+    paths: #note, accepts globs, not regexes
+      - "*_test.go"
+    carryforward: true
