@@ -1,27 +1,45 @@
 codecov:
-  notify:
-    require_ci_to_pass: yes
+  require_ci_to_pass: yes
   max_report_age: off
   bot: "codecov-bot"
+  strict_yaml_branch: "main"
 
+parsers:
+  go:
+    partials_as_hits: true
 comment:
   layout: "header, diff, flags"
   behavior: default
   require_changes: no
   require_base: no
   require_head: yes
+  show_carryforward_flags: true
+
 coverage:
   precision: 2
   round: down
   range: "70...100"
 
   status:
-    project: yes
-    patch: yes
-    changes: no
+    patch: true
+
+    project:
+      default:
+        target: auto
+        threshold: 0%
+        base: auto
+        flags:
+          - unit
+        branches:
+          - main
+        if_ci_failed: error
+        only_pulls: false
 
 flags:
   unit:
     paths: #note, accepts globs, not regexes
       - "*_test.go"
     carryforward: true
+
+github_checks:
+  annotations: true
