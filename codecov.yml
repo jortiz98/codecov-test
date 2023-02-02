@@ -6,6 +6,7 @@ codecov:
 parsers:
   go:
     partials_as_hits: true
+
 comment:
   layout: "header, diff, flags"
   behavior: default
