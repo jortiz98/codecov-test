@@ -15,18 +15,21 @@ var testcase = []struct {
 		Year:  1985,
 		Model: "M3",
 		Maker: "BMW",
+		Color: "blue",
 	}},
 	{name: "Audi", car: &foobar.Car{
 		Miles: 291000,
 		Year:  2001,
 		Model: "r8",
 		Maker: "Audi",
+		Color: "Gray",
 	}},
 	{name: "Tesla", car: &foobar.Car{
 		Miles: 6540,
 		Year:  2022,
 		Model: "Model Y",
 		Maker: "Tesla",
+		Color: "Black",
 	}},
 }
 
@@ -68,6 +71,16 @@ func TestCar_GetYear(t *testing.T) {
 			actual := tc.car.GetYear()
 
 			assert.Equal(t, tc.car.Year, actual)
+		})
+	}
+}
+
+func TestCar_GetColor(t *testing.T) {
+	for _, tc := range testcase {
+		t.Run(tc.name, func(t *testing.T) {
+			actual := tc.car.GetColor()
+
+			assert.Equal(t, tc.car.Color, actual)
 		})
 	}
 }
